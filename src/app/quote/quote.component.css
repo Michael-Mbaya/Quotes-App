@@ -1,29 +1,53 @@
-body{
-    background-image: url('./sticky-notes.jpg');
-    background-size: 100% 100%;
-    overflow: hidden;
+body {
+  background-image: url('./sticky-notes.jpg');
+  background-size: 100% 100%;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
-.container{
-    height: 100vh;
-    border-radius: 25px;
-    overflow: hidden;
-}
-.jumbotron{
-    background-image: url('./words-to-live-by.jpg');
-    background-size: 100% 100%;
-    overflow: hidden;
-
+div {
+  overflow: hidden;
 }
 
-.fa{
-    font-size: 30px;
-    margin: 5px 5px;    
+.container {
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
+.jumbotron {
+  background-image: url('./words-to-live-by.jpg');
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.fa {
+  font-size: 30px;
+  margin: 5px 5px;
+}
+
+.votes{
+  color: #81EDF4;
+}
+
+.card:nth-child(odd){
+  background: #0E3B5C;
+}
+
+.card:nth-child(even) {
+  background: #881E06;
+}
+
+.card:first-child{
+  background: #37482E;
+}
+
+.card:last-child{
+  background: #390842;
+}
 
 .btn:focus {
-    outline: none;
-    box-shadow: none;
-    /* color: red; */
-  }
+  outline: none;
+  box-shadow: none;
+  /* color: red; */
+}
