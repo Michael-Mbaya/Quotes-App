@@ -12,28 +12,43 @@
           <i class="fa fa-sticky-note text-warning" aria-hidden="true"></i>
           <i class="fa fa-sticky-note text-danger" aria-hidden="true"></i>
           <i class="fa fa-sticky-note text-info" aria-hidden="true"></i>
+          <i class="fa fa-sticky-note text-success" aria-hidden="true"></i>
         </p>
       </div>
     </div>
 
     <div class="d-flex flex-wrap justify-content-around m-2">
       <div class="col-md-3 card text-white lead my-1" *ngFor='let quote of quotes;let i = index'>
-        <div class="card-header">Header</div>
-        <div class="card-body">
-          <div class="card-text text-center">
+        <div class="card-header py-1 row justify-content-start align-items-center">
+          <i class="fa fa-user p-2 border border-light rounded" aria-hidden="true"></i>
+          {{quote.PostedBy}}
+        </div>
+        <div class=" text-center text-white">
+            Posted: {{quote.PostDate|date}}
+        </div>
+        <hr class="my-1">
+        <div class="card-body p-1">
+          <div class="card-text text-left">
             {{quote.TextQuote}}
+            <div class="text-center">
+              - {{quote.AuthorOfQuote}}
+            </div>
           </div>
         </div>
-        <div class="card-footer row justify-content-around align-items-center">
-          <div>{{quote.upvotes}}</div>
+        <div class="card-footer px-2 bg-light row justify-content-around align-items-center">
+          <div class="countLike">{{quote.upvotes}}</div>
           <div>
             <button class="votes btn btn-outline-none bg-transparent"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
           </div>
           <div>
             <button class="votes btn btn-outline-none bg-transparent"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
           </div>
-          <div>{{quote.downvotes}}</div>
+          <div class="countDislike">{{quote.downvotes}}</div>
+          <div>
+            <button class="btn btn-outline-none bg-transparent"><i class="fa fa-trash text-danger" aria-hidden="true"></i></button>
+          </div>
         </div>
+
       </div>
 
     </div>
