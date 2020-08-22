@@ -1,0 +1,22 @@
+div {
+    overflow: hidden;
+  }
+
+.votes{
+    color: blue;
+  }
+
+  .countLike,.countDislike{
+    padding: 5px;
+    margin: 5px;
+    color: black;
+  }
+
+  .fa {
+    font-size: 30px;
+    margin: 5px 5px;
+  }
+  
+  button{
+    padding: 5px;
+  }

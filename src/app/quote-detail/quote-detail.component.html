@@ -1,1 +1,13 @@
-<p>quote-detail works!</p>
+<div class="card-footer px-2 bg-light row justify-content-around align-items-center">
+    <div class="countLike">{{quote.upvotes}}</div>
+    <div>
+      <button class="votes btn btn-outline-none bg-transparent"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+    </div>
+    <div>
+      <button class="votes btn btn-outline-none bg-transparent"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+    </div>
+    <div class="countDislike">{{quote.downvotes}}</div>
+    <div>
+      <button class="btn btn-outline-none bg-transparent"><i class="fa fa-trash text-danger" aria-hidden="true"></i></button>
+    </div>
+  </div>

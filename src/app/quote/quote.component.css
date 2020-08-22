@@ -25,23 +25,8 @@ div {
   border-bottom-style: hidden;
 }
 
-.fa {
-  font-size: 30px;
-  margin: 5px 5px;
-}
-
-button{
-  padding: 5px;
-}
-
-.countLike,.countDislike{
-  padding: 5px;
-  margin: 5px;
-  color: black;
-}
-
-.votes{
-  color: blue;
+.card-text p, .card-text p i{
+  margin: 2px;
 }
 
 .card:nth-child(odd){

@@ -8,7 +8,7 @@ import {  Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
 
-  quotes = [
+  quotes:Quote[] = [
     new Quote("If you cannot laugh at yourself then qwertyuioasdfghjkldfcvghb can't share Humor", 'Jim Carrey', 'Admin', new Date(2018, 4, 27, 23, 1), 0, 0),
     new Quote("From you believe, so you shall achieve", 'Me', 'Admin', new Date(2019, 2, 27), 0, 0),
     new Quote('Life is what You make it', 'Vybz kartel', 'Me', new Date(2020, 8, 4), 0, 0),
