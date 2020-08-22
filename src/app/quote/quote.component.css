@@ -21,9 +21,9 @@ div {
   overflow: hidden;
 }
 
-.lead i{
+.fa-sticky-note{
   margin: 5px;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .card-header{
