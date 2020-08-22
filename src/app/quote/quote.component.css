@@ -21,6 +21,11 @@ div {
   overflow: hidden;
 }
 
+.lead i{
+  margin: 5px;
+  font-size: 25px;
+}
+
 .card-header{
   border-bottom-style: hidden;
 }

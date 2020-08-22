@@ -1,11 +1,11 @@
 <body>
   <div class=" container bg-info my-4 p-0">
-    <!-- 
-         -->
-    <!-- 😌 -->
+
     <div class="intro">
-      <div class="jumbotron mb-1 text-white bg-transparent text-center text-white">
-        <h1 class="display-4 text-capitalize mt-3">Quotes Arena</h1>
+      <div class="jumbotron mb-1 pt-1 text-white bg-transparent text-center text-white">
+        <p class="lead mb-2">Did you Know? Scientific research has shown that motivational quotes 
+          make us feel the same as actually accomplishing something.</p>
+        <h1 class="display-4 text-capitalize mt-4">Quotes Arena</h1>
         <p class="lead"> Stick your Quotes Here With us</p>
         <hr class="my-2">
         <p class="lead">
@@ -20,15 +20,15 @@
     <div class="d-flex flex-wrap justify-content-around m-2">
       <div class="col-md-3 card text-white lead my-1" *ngFor='let quote of quotes;let i = index'>
         <div class="card-header py-1 row justify-content-start align-items-center">
-          <i class="fa fa-user p-2 border border-light rounded" aria-hidden="true"></i>
+          <i class="fa fa-user p-2 m-2 border border-light rounded" aria-hidden="true"></i>
           {{quote.PostedBy}}
         </div>
         <div class=" text-center text-white">
-            Posted: {{quote.PostDate|date}}
+            Posted: {{quote.PostDate|timeCount}}
         </div>
         <hr class="my-1">
         <div class="card-body p-1">
-          <div class="card-text text-left">
+          <div class="card-text text-left">           
             <p class="text-left"><i class="fa fa-quote-left" style="font-size: 12px;" aria-hidden="true"></i></p>
             <p class="text-center">{{quote.TextQuote}}</p>
             <p class="text-right"><i class="fa fa-quote-right" style="font-size: 12px;" aria-hidden="true"></i></p>
@@ -37,7 +37,7 @@
             </div>
           </div>
         </div>
-        <app-quote-detail [quote]='quote'></app-quote-detail>
+        <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
       </div>
 
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {  Quote } from '../quote';
 
 @Component({
@@ -9,6 +9,20 @@ import {  Quote } from '../quote';
 export class QuoteDetailComponent implements OnInit {
 
   @Input() quote: Quote;
+  @Output() isComplete = new EventEmitter<boolean>();;
+
+  quoteDelete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
+
+  downvotes(){
+    // this.quote[i]=this.quote.downvotes+1;
+    this.quote.downvotes = this.quote.downvotes +1; //adds one per mouse click
+  }
+  upvotes(){
+    this.quote.upvotes = this.quote.upvotes +1;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
