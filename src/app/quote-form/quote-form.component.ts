@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  Quote } from '../quote'
 
 @Component({
   selector: 'app-quote-form',
@@ -14,6 +15,8 @@ export class QuoteFormComponent implements OnInit {
   hideQuoteForm(){
     this.showForm=false;
   }
+
+  newQuote = new Quote("","","",new Date(),0,0);
 
   constructor() { }
 
