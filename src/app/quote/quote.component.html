@@ -34,9 +34,9 @@
             <p class="text-left"><i class="fa fa-quote-left" style="font-size: 12px;" aria-hidden="true"></i></p>
             <p class="text-center">{{quote.TextQuote}}</p>
             <p class="text-right"><i class="fa fa-quote-right" style="font-size: 12px;" aria-hidden="true"></i></p>
-            <div class="text-center">
+            <!-- <div class="text-center">
               - {{quote.AuthorOfQuote}}
-            </div>
+            </div> -->
           </div>
         </div>
         <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>

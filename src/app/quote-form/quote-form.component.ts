@@ -21,7 +21,7 @@ export class QuoteFormComponent implements OnInit {
   today(){
     // let d:Date = new Date();
     // return d;
-var today = new Date();
+let today = new Date();
 let trueDateTime = new Date(today.getFullYear(),today.getMonth(),today.getDate(),today.getHours(),today.getMinutes(),today.getSeconds());
 return trueDateTime
   }
