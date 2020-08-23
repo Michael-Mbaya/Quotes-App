@@ -1,5 +1,5 @@
 # Quotes Arena
-##### An Anglar App where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+### An Anglar App where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
 
 ## By Michael-Mbaya
 
