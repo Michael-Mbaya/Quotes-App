@@ -32,13 +32,16 @@ export class TimeCountPipe implements PipeTransform {
     else if (minutesCounter<=1){
       return("A few seconds ago")
     }
+    else if (minutesCounter>=1 && minutesCounter<2){
+      return(minutesCounter+" minute ago")
+    }
     else if (minutesCounter>1 && minutesCounter<60){
       return(minutesCounter+ " minutes ago")
     }
     else if (hoursCounter>=1 && hoursCounter<2){
       return(hoursCounter+ " hour ago")
     }
-    else if (hoursCounter>=1 && hoursCounter<24){
+    else if (hoursCounter>1 && hoursCounter<24){
       return(hoursCounter+ " hours ago")
     }
     else if (daysCounter <= 1){

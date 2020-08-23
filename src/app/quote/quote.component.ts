@@ -15,7 +15,7 @@ export class QuoteComponent implements OnInit {
     new Quote('Its always the nizzle my Shizzle', 'Snoop Dogg', 'Main Moi', new Date(2019, 11, 31), 0, 0),
     new Quote('Its always the nizzle my Shizzle', 'Snoop Dogg', 'Main Moi', new Date(2015, 10, 10), 0, 0),
     new Quote('Siwezi Wacha Vela', 'Zzero Sufuri', 'Ombitho', new Date(2010, 11, 12), 0, 0),
-    new Quote('Siwezi Wacha Vela', 'Zzero Sufuri', 'Ombitho', new Date(2020, 7, 22), 0, 0)
+    new Quote('Siwezi Wacha Vela', 'Zzero Sufuri', 'Ombitho', new Date(2020, 7, 2), 0, 0)
   ];    //for dates, months counted from 0 i.e 0 is Jan to 11 is Dec
 
   addNewQuote(quote){

@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {  Quote } from '../quote'
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {  Quote } from '../quote';
 
 @Component({
   selector: 'app-quote-form',
@@ -16,12 +16,20 @@ export class QuoteFormComponent implements OnInit {
     this.showForm=false;
   }
   
-  newQuote = new Quote("","","",new Date(),0,0);
+  @Input() quote: Quote;
 
-  // var today = new Date();
-  // var date = today.+'-'+(today.getMonth()+1)+'-'+today.getDate();
-  // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  // var dateTime = date+' '+time;
+  today(){
+    // let d:Date = new Date();
+    // return d;
+    var today = new Date();
+// var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+// var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+// var dateTime = date+' '+time;
+let trueDateTime = new Date(today.getFullYear(),today.getMonth(),today.getDate(),today.getHours(),today.getMinutes(),today.getSeconds());
+return trueDateTime
+  }
+  
+  newQuote = new Quote("","","",this.today(),0,0);
 
   @Output() addQuote = new EventEmitter<Quote>();
 
@@ -29,7 +37,9 @@ export class QuoteFormComponent implements OnInit {
 this.addQuote.emit(this.newQuote);
   }
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
   }

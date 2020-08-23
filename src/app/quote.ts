@@ -6,5 +6,7 @@ export class Quote {
         public PostDate: Date,
         public upvotes: number,
         public downvotes: number
-      ) {  }
+      ) { 
+  
+       }
 }
