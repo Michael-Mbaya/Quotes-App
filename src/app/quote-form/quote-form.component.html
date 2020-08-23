@@ -6,7 +6,7 @@
     </button>
   </div>
   
-  <form *ngIf='showForm' #quoteForm='ngForm'>
+  <form *ngIf='showForm' #quoteForm='ngForm' (ngSubmit)='submitQuote()'>
 
     <div class="flex-form text-center m-2">
 

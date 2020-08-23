@@ -18,6 +18,14 @@ export class QuoteComponent implements OnInit {
     new Quote('Siwezi Wacha Vela', 'Zzero Sufuri', 'Ombitho', new Date(2020, 7, 22), 0, 0)
   ];    //for dates, months counted from 0 i.e 0 is Jan to 11 is Dec
 
+  addNewQuote(quote){
+    // let quoteLength = this.quotes.length;
+    // quote.id = quoteLength+1;
+    // quote.completeDate = new Date(quote.completeDate)
+    this.quotes.unshift(quote)
+  }
+
+  
   deleteQuote(isComplete, index){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete "${this.quotes[index].TextQuote}"?`)
