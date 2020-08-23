@@ -9,7 +9,7 @@ import {  Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    new Quote("If you cannot laugh at yourself then qwertyuioasdfghjkldfcvghb can't share Humor", 'Jim Carrey', 'Admin', new Date(2018, 4, 27, 23, 1), 0, 0),
+    new Quote("If you cannot laugh at yourself then you really can't share Humor with others.", 'Jim Carrey', 'Admin', new Date(2018, 4, 27, 23, 1), 0, 0),
     new Quote("From you believe, so you shall achieve", 'Me', 'Admin', new Date(2020, 6, 21), 0, 0),
     new Quote('Life is what You make it', 'Vybz kartel', 'Me', new Date(2020, 7, 12), 0, 0),
     new Quote('Its always the nizzle my Shizzle', 'Snoop Dogg', 'Main Moi', new Date(2019, 11, 31), 0, 0),

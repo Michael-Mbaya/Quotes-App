@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteFormComponent implements OnInit {
 
+  showForm:boolean = false;
+  showQuoteForm(){
+    this.showForm=true;
+  }
+  hideQuoteForm(){
+    this.showForm=false;
+  }
+
   constructor() { }
 
   ngOnInit(): void {

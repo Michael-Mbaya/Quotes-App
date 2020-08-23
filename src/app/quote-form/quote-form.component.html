@@ -1,1 +1,47 @@
-<p>quote-form works!</p>
+<div class=" row justify-content-center">
+  <button class="btn btn-success text-white" (click)="showQuoteForm()">
+    <i class="fa fa-plus mx-2" aria-hidden="true"></i>Add New Quote
+  </button>
+</div>
+
+<form *ngIf='showForm'>
+  <div class=" row justify-content-center">
+    <button class="btn btn-danger text-white my-2" (click)="hideQuoteForm()">
+      <i class="fa fa-times-circle mx-2" aria-hidden="true"></i>Cancel
+    </button>
+  </div>
+  <!-- authors details -->
+  <div class="form-group">
+    <label for="name">Original Authors Name</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+    <!-- <div [hidden]="name.valid || name.pristine" class="alert alert-warning">
+        <p>Please add original author's name</p>
+      </div> -->
+  </div>
+  <!-- quote itself -->
+  <div class="form-group">
+    <label for="description">Quote</label>
+    <textarea class="form-control" id="description" rows="4" name="quote" required></textarea>
+    <!-- <div [hidden]="description.valid || description.pristine" class="alert alert-warning">
+        <p> Quote Required</p>
+      </div> -->
+  </div>
+  <!--who submitted the quote  -->
+  <div class="form-group">
+    <label for="submitter">Submitted By:</label>
+    <textarea class="form-control" id="submitter" rows="1" name="submitter" required></textarea>
+    <!-- <div [hidden]="description.valid || description.pristine" class="alert alert-warning">
+        <p> Please add your name</p>
+      </div> -->
+  </div>
+  <button type="Submit" class="btn btn-primary ">Publish Quote</button><br>
+</form>
+
+<div class="flex-form text-center">
+  <div class="flex-1">
+    <!-- <p>1</p> -->
+  </div>
+  <div class="flex-2">
+    <!-- <p>2</p> -->
+  </div>
+</div>
