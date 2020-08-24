@@ -10,9 +10,9 @@ export class TimeCountPipe implements PipeTransform {
     let todayWithNoTime:any = new Date(today.getFullYear(), today.getMonth(), today.getDate())
     let dateDifference = Math.abs(value - todayWithNoTime) //returns value in miliseconds
 
-    const secondsInDay = 86400; //60 seconds * 60 minutes in an hour * 24 hours in a day
-    const secondsInHour = 3600; //60 sec * 60 min(1hr)
-    const secondsInMinute = 60; //self-explanatory ==> 60secs make a min
+    let secondsInDay = 86400; //60 seconds * 60 minutes in an hour * 24 hours in a day
+    let secondsInHour = 3600; //60 sec * 60 min(1hr)
+    let secondsInMinute = 60; //self-explanatory ==> 60secs make a min
     let secondsInMonth = (secondsInDay*30);   //since average of 30 days is a month
     let secondsInYear = (secondsInMonth*12);  //since 12 months equals a year
 
@@ -26,23 +26,26 @@ export class TimeCountPipe implements PipeTransform {
     let yearCounter = Math.floor(dateDifferenceSeconds/secondsInYear);
     
 
-    if(daysCounter > 1 && value > todayWithNoTime){
-      return (daysCounter+" days ahead");
-    }
-    else if (minutesCounter<=1){
-      return("A few seconds ago")
-    }
-    else if (minutesCounter>=1 && minutesCounter<2){
-      return(minutesCounter+" minute ago")
-    }
-    else if (minutesCounter>1 && minutesCounter<60){
-      return(minutesCounter+ " minutes ago")
-    }
-    else if (hoursCounter>=1 && hoursCounter<2){
-      return(hoursCounter+ " hour ago")
-    }
-    else if (hoursCounter>1 && hoursCounter<24){
-      return(hoursCounter+ " hours ago")
+    // if(daysCounter > 1 && value > todayWithNoTime){
+    //   return (daysCounter+" days ahead");
+    // }
+    // else if (minutesCounter<=1){
+    //   return("A few seconds ago")
+    // }
+    // else if (minutesCounter>=1 && minutesCounter<2){
+    //   return(minutesCounter+" minute ago")
+    // }
+    // else if (minutesCounter>1 && minutesCounter<60){
+    //   return(minutesCounter+ " minutes ago")
+    // }
+    // else if (hoursCounter>=1 && hoursCounter<2){
+    //   return(hoursCounter+ " hour ago")
+    // }
+    // else if (hoursCounter>1 && hoursCounter<24){
+    //   return(hoursCounter+ " hours ago")
+    // }
+    if (daysCounter<=1){
+      return ("Today");
     }
     else if (daysCounter <= 1){
       return (daysCounter+" day ago");

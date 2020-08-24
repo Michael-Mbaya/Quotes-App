@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {  Quote } from '../quote';
+// import * as $ from 'jquery'; 
 
 @Component({
   selector: 'app-quote-form',

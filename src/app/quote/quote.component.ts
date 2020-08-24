@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  Quote } from '../quote';
+// import * as $ from 'jquery';
 
 @Component({
   selector: 'app-quote',

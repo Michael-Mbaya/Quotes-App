@@ -11,14 +11,19 @@ div {
 
 .container {
   height: 100%;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   overflow: hidden;
+}
+
+.intro{
+  border-radius: 0px;
 }
 
 .jumbotron {
   background-image: url('./words-to-live-by.jpg');
   background-size: 100% 100%;
   overflow: hidden;
+  border-radius: 0px;
 }
 
 .fa-sticky-note{
